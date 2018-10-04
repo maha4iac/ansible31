@@ -4,3 +4,7 @@
   tasks:
   - name: ping all my nodes
     ping:
+  - name: install git
+    apt:
+      name: git
+      state: present 
