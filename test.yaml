@@ -1,0 +1,18 @@
+---
+- studentDetails: 
+  - name: maha
+    phono: 888888
+    email: maha@gmail.com
+    Address:
+      doorno: 23
+      street: 1
+      pin: 500027
+  - name: narsimha
+    phono: 888888
+    email: narsimha@gmail.com
+    Address:
+      doorno: 23
+      street: 52
+      pin: 500072
+
+
