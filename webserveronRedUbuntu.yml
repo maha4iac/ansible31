@@ -12,3 +12,9 @@
       name: httpd
       state: present
     when: ansible_os_family =="RedHat"
+  - name: start the webserver on Redhat
+    service:
+      name: httpd
+      state: started
+    when: ansible_os_family =="RedHat"
+
