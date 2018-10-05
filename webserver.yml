@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: remove webserver on ubuntu (apache2)
+    apt:
+      name: apache2
+      state: absent
+  - name:  install webserver on ubuntu (apache2)
+    apt:
+      name: apache2
+      state: present
+
