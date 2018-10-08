@@ -8,3 +8,17 @@
   - name: display the myresults
     debug:
       msg: "{{ myresults }}"
+  - name: install git
+    yum:
+      name: git
+      state: present
+    when: myresults.stderr ==""
+
+  - name: install tree
+    yum: 
+      name: tree
+      state: present
+    when: myresults.stderr =!""
+
+
+  
