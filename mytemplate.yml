@@ -1,0 +1,18 @@
+---
+- hosts: webservers
+  become: yes
+  tasks: 
+  - include_tasks: myfile.yml
+  - name: install webserver
+    yum:
+      name: httpd
+      state: present
+  - name: start the webserver
+    service:
+      name: httpd
+      state: started
+
+  - name: copy  my index file into webserver
+    template:
+      src: 
+      dest: /var/www/html/index.html
