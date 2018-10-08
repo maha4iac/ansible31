@@ -18,7 +18,7 @@
     yum: 
       name: tree
       state: present
-    when: myresults.stderr =!""
+    when: myresults.stderr !=""
 
 
   
