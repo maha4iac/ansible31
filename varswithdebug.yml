@@ -10,5 +10,5 @@
       msg: "{{ myvar1 }}"
   
   - name: display the 77myvar2
-    degug:
+    debug:
       msg: "{{ myvar2 }}"
