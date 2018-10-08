@@ -1,0 +1,14 @@
+---
+- hosts: webservers
+  become: yes
+  vars: 
+    myvar1: teju
+    myvar2: madhu
+  tasks:
+  - name: display the myvar1
+    debug:
+      msg: "{{ myvar1 }}"
+  
+  - name: display the 77myvar2
+    degug:
+      msg: "{{ myvar2 }}"
