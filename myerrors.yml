@@ -6,6 +6,7 @@
     yum:
       name: git
       state: present
+    
 
   - name: install tree 
     yum:
