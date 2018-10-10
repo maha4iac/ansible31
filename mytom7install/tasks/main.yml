@@ -1,2 +1,28 @@
 ---
 # tasks file for mytom7install
+ - name: install tomcat7 on redhat
+   yum:
+     name: tomcat
+     state: present
+
+ - name: copy the tomcat config  file into all redhat nodes
+   template:
+     src:   templates/tomconf.j2
+     dest: /usr/share/tomcat/conf/tomcat.conf
+   notify: tomstart
+
+ - name: install tomcat7 Admin Packages
+   yum:
+     name: "{{ item }}"
+     state: present
+   with_items:
+     - tomcat-webapps
+     - tomcat-admin-webapps 
+
+ - name: copy the tomcat user.xml into all redhat nodes
+   template:
+     src: templates/tomuser.j2
+     dest: /usr/share/tomcat/conf/tomcat-users.xml
+   notify: tomrestart
+
+
